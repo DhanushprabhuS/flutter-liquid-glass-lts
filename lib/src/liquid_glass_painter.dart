@@ -166,7 +166,6 @@ class LiquidGlassPainter extends CustomPainter {
     final innerScale = math.pow(0.55, 1.0 / power).toDouble();
 
     final rect = Offset.zero & size;
-    final innerRect = rect.deflate(size.shortestSide * (1 - innerScale) / 2);
 
     final gradient = ui.Gradient.radial(
       rect.center,

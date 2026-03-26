@@ -3,7 +3,7 @@ description: >
   Apple-inspired Liquid Glass UI effects for Flutter — refraction, dispersion,
   Fresnel reflection, blob merging, glare, and animated glass shapes.
 version: 0.1.0
-homepage: https://github.com/your-org/liquid_glass
+homepage: https://github.com/DhanushprabhuS/flutter-liquid-glass-lts
 
 environment:
   sdk: ">=3.0.0 <4.0.0"

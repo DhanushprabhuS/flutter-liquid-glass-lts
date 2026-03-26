@@ -174,7 +174,6 @@ class _BlobGroupPainter extends CustomPainter {
     // ── Now paint the merged shape ────────────────────────────────────────
     // 1. Blur backdrop
     if (config.blur.enabled) {
-      final sigma = config.blur.sigma;
       canvas.saveLayer(null, Paint());
       canvas.clipPath(smoothPath);
       canvas.restore();
@@ -220,12 +219,6 @@ class _BlobGroupPainter extends CustomPainter {
   Path _dilateErodePath(Path input, double amount) {
     // We use Path.combine with a stroked offset to approximate morphological
     // closing.  Expand the path using a fat stroke then fill.
-    final strokePaint = Paint()
-      ..style = PaintingStyle.stroke
-      ..strokeWidth = amount * 2
-      ..strokeJoin = StrokeJoin.round
-      ..strokeCap = StrokeCap.round;
-
     // Create a "fattened" path by combining fill + stroke.
     final fat = Path.combine(
       PathOperation.union,
