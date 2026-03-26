@@ -2,7 +2,6 @@ import 'dart:math' as math;
 import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 
 import 'liquid_glass_config.dart';
 import 'liquid_glass_painter.dart';
@@ -234,9 +233,9 @@ class _BlobGroupPainter extends CustomPainter {
       rect.center,
       rect.longestSide / 2,
       [
-        cfg.color.withOpacity(0),
-        cfg.color.withOpacity(cfg.intensity * 0.6),
-        cfg.color.withOpacity(cfg.intensity),
+        cfg.color.withValues(alpha: 0),
+        cfg.color.withValues(alpha: cfg.intensity * 0.6),
+        cfg.color.withValues(alpha: cfg.intensity),
       ],
       [0.45, 0.75, 1.0],
     );
@@ -255,9 +254,9 @@ class _BlobGroupPainter extends CustomPainter {
       Offset.zero,
       rect.longestSide * cfg.size,
       [
-        cfg.color.withOpacity(opacity),
-        cfg.color.withOpacity(opacity * 0.3),
-        cfg.color.withOpacity(0),
+        cfg.color.withValues(alpha: opacity),
+        cfg.color.withValues(alpha: opacity * 0.3),
+        cfg.color.withValues(alpha: 0),
       ],
       [0.0, cfg.hardness.clamp(0.05, 0.95), 1.0],
     );
