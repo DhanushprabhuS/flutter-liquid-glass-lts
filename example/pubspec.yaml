@@ -1,0 +1,16 @@
+name: liquid_glass_example
+description: Example app demonstrating the liquid_glass Flutter package.
+publish_to: none
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  liquid_glass:
+    path: ../
+
+flutter:
+  uses-material-design: true
